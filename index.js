@@ -38,12 +38,14 @@ const playGame = () => {
 
 const updateDOM = (moveOne, moveTwo, outcome) => {
   document.getElementById("player-one-move__name").textContent = moveOne;
-  document.getElementById("player-one-move__img").src =
-    "./images/" + moveOne + ".png";
+  document
+    .getElementById("player-one-move__img")
+    .setAttribute("src", `./images/${moveOne}.png`);
 
   document.getElementById("player-two-move__name").textContent = moveTwo;
-  document.getElementById("player-two-move__img").src =
-    "./images/" + moveTwo + ".png";
+  document
+    .getElementById("player-two-move__img")
+    .setAttribute("src", `./images/${moveTwo}.png`);
 
   const displayOutcome = document.createElement("p");
   displayOutcome.textContent = outcome;
